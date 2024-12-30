@@ -3,19 +3,19 @@
 <head>
     <script>
         function loadTemplate() {
-            fetch('./contents/head.html')
+            fetch('./head-content.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('head-placeholder').innerHTML = data;
                 });
 
-            fetch('./contents/nav.html')
+            fetch('./nav-content.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('nav-placeholder').innerHTML = data;
                 });
 
-            fetch('./contents/footer.html')
+            fetch('./footer-content.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-placeholder').innerHTML = data;
@@ -24,7 +24,7 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             loadTemplate();
-            fetch('./contents/decor.html')
+            fetch('./decor-content.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('content-placeholder').innerHTML = data;
